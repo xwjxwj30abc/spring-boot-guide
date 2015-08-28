@@ -1,5 +1,6 @@
 package zx.soft.sample.jetty.beans;
 
+import java.net.InetAddress;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +17,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomizationEmbeddedServletContainer implements EmbeddedServletContainerCustomizer {
 
+	private static final InetAddress InetAddress = null;
+
 	@Value("${server.port}")
 	private String port;
 
@@ -29,7 +32,6 @@ public class CustomizationEmbeddedServletContainer implements EmbeddedServletCon
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
 		container.setPort(Integer.parseInt(port));
-		container.setAddress(InetAddress )
 		container.setSessionTimeout(Integer.parseInt(sessionTimeout));
 	}
 
