@@ -322,3 +322,6 @@
 2015-08-28 17:23:02,046 [http-nio-192.168.6.126-8900-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [Line:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2015-08-28 17:23:02,047 [http-nio-192.168.6.126-8900-exec-1] INFO  o.s.web.servlet.DispatcherServlet [Line:485] - FrameworkServlet 'dispatcherServlet': initialization started
 2015-08-28 17:23:02,060 [http-nio-192.168.6.126-8900-exec-1] INFO  o.s.web.servlet.DispatcherServlet [Line:504] - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2015-08-28 17:27:32,366 [Thread-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [Line:862] - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59717824: startup date [Fri Aug 28 17:22:55 CST 2015]; root of context hierarchy
+2015-08-28 17:27:32,368 [Thread-1] INFO  o.s.j.e.a.AnnotationMBeanExporter [Line:449] - Unregistering JMX-exposed beans on shutdown
+2015-08-28 17:27:32,371 [Thread-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [Line:462] - Closing JPA EntityManagerFactory for persistence unit 'default'
