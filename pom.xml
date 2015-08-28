@@ -14,6 +14,7 @@
 	<modules>
 		<module>sample-jetty </module>
 		<module>spring-boot-parent</module>
+		<module>sample-data-jpa</module>
 	</modules>
 
 
