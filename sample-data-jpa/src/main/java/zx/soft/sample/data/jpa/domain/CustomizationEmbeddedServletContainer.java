@@ -1,16 +1,6 @@
 package zx.soft.sample.data.jpa.domain;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
-import org.springframework.stereotype.Component;
-
-@Component
+/*@Component
 public class CustomizationEmbeddedServletContainer implements EmbeddedServletContainerCustomizer {
 
 	@Value("${server.port}")
@@ -46,3 +36,4 @@ public class CustomizationEmbeddedServletContainer implements EmbeddedServletCon
 	}
 
 }
+ */
