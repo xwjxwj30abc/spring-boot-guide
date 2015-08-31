@@ -21,7 +21,7 @@ public class SampleDataJpaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		repository.save(new Customer("first", "last"));
+		//		repository.save(new Customer("redis", "redis"));
 
 		for (Customer customer : repository.findAll()) {
 			System.out.println(customer);

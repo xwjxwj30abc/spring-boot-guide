@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import zx.soft.sample.data.jpa.utils.Object2Json;
+
 @Entity
 public class Customer {
 
@@ -41,6 +43,11 @@ public class Customer {
 	@Override
 	public String toString() {
 		return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id, firstName, lastName);
+	}
+
+	public static void main(String[] args) {
+		Customer customer = new Customer("redis-first", "redis-last");
+		System.out.println(Object2Json.toJsonWithoutPretty(customer));//{"firstName":"redis-first","lastName":"redis-last"}
 	}
 
 }

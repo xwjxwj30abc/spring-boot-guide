@@ -1,4 +1,4 @@
-package zx.soft.sample.data.jpa.domain;
+package zx.soft.sample.data.jpa.configuration;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;

@@ -1,4 +1,4 @@
-package zx.soft.sample.data.jpa.domain;
+package zx.soft.sample.data.jpa.configuration;
 
 /*@Component
 public class CustomizationEmbeddedServletContainer implements EmbeddedServletContainerCustomizer {
