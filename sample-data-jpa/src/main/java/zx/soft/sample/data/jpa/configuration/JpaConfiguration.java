@@ -14,9 +14,14 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
+/**
+ * 数据持久化到数据库配置类
+ * @author xuwenjuan
+ *
+ */
 @Configuration
 @EnableJpaRepositories("zx.soft.sample.data.jpa.service")
-public class AppConfiguration {
+public class JpaConfiguration {
 
 	@Autowired
 	Environment envir;
@@ -44,4 +49,5 @@ public class AppConfiguration {
 		lemfb.setPackagesToScan("zx.soft.sample.data.jpa");
 		return lemfb;
 	}
+
 }

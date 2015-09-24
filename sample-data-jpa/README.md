@@ -47,4 +47,7 @@ logging.level.org.hibernate: ERROR
 就可以在application.properties中声明以下字段，为访问接口提供类似于表单一样的验证
 security.user.name=admin
 security.user.password=test
+
+curl 时使用 -u user:password进行验证
+curl -XPUT -u admin:test ...
 ```

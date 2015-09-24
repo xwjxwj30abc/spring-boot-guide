@@ -3,7 +3,6 @@ package zx.soft.sample.data.jpa.web;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +28,6 @@ public class CustomerController {
 
 	@RequestMapping(value = "/customers/last", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
-	@Cacheable(value = "customercache")
 	public List<Customer> findCustomerByLastName(@RequestParam String lastName) {
 		return repository.findByLastName(lastName);
 	}

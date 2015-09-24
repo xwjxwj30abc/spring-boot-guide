@@ -5,7 +5,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import zx.soft.sample.data.jpa.domain.Customer;
 import zx.soft.sample.data.jpa.service.CustomerRepository;
 
 @SpringBootApplication
@@ -23,15 +22,15 @@ public class SampleDataJpaApplication implements CommandLineRunner {
 
 		//		repository.save(new Customer("redis", "redis"));
 
-		for (Customer customer : repository.findAll()) {
-			System.out.println(customer);
-		}
-
-		Customer customer = repository.findOne(1L);
-		System.out.println(customer);
-
-		for (Customer bauer : repository.findByLastName("last")) {
-			System.out.println(bauer);
-		}
+		//		for (Customer customer : repository.findAll()) {
+		//			System.out.println(customer);
+		//		}
+		//
+		//		Customer customer = repository.findOne(1L);
+		//		System.out.println(customer);
+		//
+		//		for (Customer bauer : repository.findByLastName("last")) {
+		//			System.out.println(bauer);
+		//		}
 	}
 }

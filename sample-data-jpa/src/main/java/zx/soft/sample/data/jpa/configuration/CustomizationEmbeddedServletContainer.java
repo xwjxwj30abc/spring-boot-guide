@@ -1,6 +1,16 @@
 package zx.soft.sample.data.jpa.configuration;
 
-/*@Component
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
+import org.springframework.stereotype.Component;
+
+/**
+ * servlet配置类
+ * @author xuwenjuan
+ *
+ */
+@Component
 public class CustomizationEmbeddedServletContainer implements EmbeddedServletContainerCustomizer {
 
 	@Value("${server.port}")
@@ -12,14 +22,14 @@ public class CustomizationEmbeddedServletContainer implements EmbeddedServletCon
 	@Value("${server.sessionTimeout}")
 	private String sessionTimeout;
 
-	//方式一:编程方式的自定义
+	//方式一:使用pom.xml依赖中内嵌的servlet，调整其参数
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
 		container.setPort(Integer.parseInt(port));
 		container.setSessionTimeout(Integer.parseInt(sessionTimeout));
 	}
 
-	//方式二:直接定义ConfigurableEmbeddedServletContainer
+	//方式二:直接定义ConfigurableEmbeddedServletContainer，在pom.xml文件依赖中exclude　tomcat servlet并添加jetty　依赖
 	//	@Bean
 	//	public EmbeddedServletContainerFactory servletContainer() {
 	//		JettyEmbeddedServletContainerFactory factory = new JettyEmbeddedServletContainerFactory();
@@ -28,12 +38,4 @@ public class CustomizationEmbeddedServletContainer implements EmbeddedServletCon
 	//		return factory;
 	//	}
 
-	@Bean
-	public Jackson2ObjectMapperBuilder objectMapperBuilder() {
-		Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder();
-		builder.dateFormat(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.ENGLISH));
-		return builder;
-	}
-
 }
- */
