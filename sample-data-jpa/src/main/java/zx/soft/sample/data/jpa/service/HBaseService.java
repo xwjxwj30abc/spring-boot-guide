@@ -1,4 +1,4 @@
-package zx.soft.sample.jetty.service;
+package zx.soft.sample.data.jpa.service;
 
 import java.io.IOException;
 
@@ -12,11 +12,11 @@ import zx.soft.hbase.api.core.HConn;
 import com.google.protobuf.ServiceException;
 
 @Service
-public class Writer {
+public class HBaseService {
 
 	private HConnection conn;
 
-	public Writer() {
+	public HBaseService() {
 		HBaseClient client = null;
 		try {
 			client = new HBaseClient();
@@ -41,4 +41,5 @@ public class Writer {
 		}
 
 	}
+
 }

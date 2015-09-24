@@ -1,17 +1,17 @@
-package zx.soft.sample.jetty.web;
+package zx.soft.sample.data.jpa.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import zx.soft.sample.jetty.service.Writer;
+import zx.soft.sample.data.jpa.service.HBaseService;
 
 @Controller
-public class TestController {
+public class HBaseController {
 
 	@Autowired
-	private Writer writer;
+	private HBaseService hBaseService;
 
 	@RequestMapping("/hello")
 	@ResponseBody
@@ -22,7 +22,7 @@ public class TestController {
 	@RequestMapping(value = "/hbase")
 	@ResponseBody
 	public String put() {
-		writer.write("0", "qua", "value");
+		hBaseService.write("0", "qua", "value");
 		return "ok";
 	}
 
